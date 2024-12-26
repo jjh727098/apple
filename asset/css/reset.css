@@ -1,0 +1,110 @@
+/* 초기화 + 세팅 + 변수 */
+:root{
+    --padding-top : calc(calc(52px * 1 + 44px));
+	--css-scrim-opacity : .5;
+
+    --portal-headline-overlap: 50vh;
+    --video-padding-top: 100px;
+    --video-padding-bottom: 48px;
+    --video-hold-duration: 20vh;
+    --scrim-opacity: 0.5;
+    --portal-video-overlap: 10px;
+    position: relative;
+    padding-top: 0;
+}
+
+/* 초가화 */
+
+*{margin:0;padding:0;font:inherit;color:inherit;border: 0;box-sizing: border-box;}
+*, :after, :before {
+    box-sizing:border-box;
+    /*패딩 보더*/
+}
+/* html, body {overflow: auto;}  */
+img, picture, video, canvas, svg {display: block;max-width:100%;}
+button {background:none;border:0;cursor:pointer;}
+a {text-decoration:none}
+table {border-collapse:collapse;border-spacing:0}
+fieldset, input{
+    border: 0;
+}
+ul{list-style: none;}
+
+body{
+    font-size: 17px;
+    line-height: 1.4705882353;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    color: #1d1d1f;
+    font-style: normal;
+}
+
+/* font */
+@font-face{
+	font-family:'SF Pro Text';
+	src: url(../fonts/sf-pro-text_regular.woff2) format('woff2');
+	font-style:regular;
+	font-weight:500;
+}
+@font-face{
+	font-family:'SF Pro Text';
+	font-style:italic;
+	font-weight:400;
+	src: url(../fonts/sf-pro-text_regular-italic.woff2) format('woff2');
+}
+@font-face{
+	font-family:'SF Pro Text';
+	src: url(../fonts/sf-pro-text_semibold.woff2) format('woff2');
+	font-weight:600;
+}
+@font-face{
+	font-family:'SF Pro Text';
+	src: url(../fonts/sf-pro-text_semibold-italic.woff2) format('woff2');
+	font-style:italic;
+	font-weight:600;
+	
+}
+@font-face{
+	font-family:'SF Pro Icons';
+	font-style:normal;
+	font-weight:300;
+	src: url(../fonts/sf-pro-icons_light.woff2) format('woff2');
+}
+@font-face{
+	font-family:'SF Pro Icons';
+	font-style:medium;
+	font-weight:400;
+	src: url(../fonts/sf-pro-icons_medium.woff2) format('woff2');
+}
+@font-face{
+	font-family:'SF Pro Icons';
+	font-style:regular;
+	font-weight:500;
+	src: url(../fonts/sf-pro-icons_regular.woff2) format('woff2');
+}
+@font-face{
+	font-family:'SF Pro Icons';
+	font-style:semibold;
+	font-weight:600;
+	src: url(../fonts/sf-pro-icons_semibold.woff2) format('woff2');
+}
+@font-face{
+	font-family:'SF Pro Display';
+	font-style:regular;
+	font-weight:500;
+	src: url(../fonts/sf-pro-display_regular.woff2) format('woff2');
+}
+@font-face{
+	font-family:'SF Pro Display';
+	font-style:semibold;
+	font-weight:600;
+	src: url(../fonts/sf-pro-display_semibold.woff2) format('woff2');
+}
+@font-face{
+	font-family:'SF Pro Display';
+	font-style:bold;
+	font-weight:700;
+	src: url(../fonts/sf-pro-display_bold.woff2) format('woff2');
+}
