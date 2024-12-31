@@ -2,15 +2,6 @@
 :root{
     --padding-top : calc(calc(52px * 1 + 44px));
 	--css-scrim-opacity : .5;
-
-    --portal-headline-overlap: 50vh;
-    --video-padding-top: 100px;
-    --video-padding-bottom: 48px;
-    --video-hold-duration: 20vh;
-    --scrim-opacity: 0.5;
-    --portal-video-overlap: 10px;
-    position: relative;
-    padding-top: 0;
 }
 
 /* 초가화 */

@@ -4,23 +4,11 @@
 /*
     헤더+푸터+큰틀
 */
-
-.portal-layout{
-    --portal-headline-overlap: 50vh;
-    --video-padding-top: 100px;
-    --video-padding-bottom: 48px;
-    --video-hold-duration: 20vh;
+.layout{
     --scrim-opacity: 0.5;
-    --portal-video-overlap: 10px;
-    --portal-headline-lockup-height: 209px;
-    --r-localnav-text-zoom-factor: 1;
-    --r-localnav-height: calc(52px* var(--r-localnav-text-zoom-factor));
-    --drawer-wrapper-height: 243px;
-    position: relative;
-    padding-top: 0;
+    --zoom: 1;
+    --window-height: calc(52px* var(--zoom));
 }
-
-
 header{
     z-index: 51;
     background-color: rgba(250, 250, 252, 0.8);

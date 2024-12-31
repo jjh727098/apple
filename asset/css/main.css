@@ -597,14 +597,14 @@
 }
 .sub_sc .sticky{
     position: sticky;
-    top: var(--r-localnav-height);
-    height: calc(100vh - var(--r-localnav-height));
+    top: var(--window-height);
+    height: calc(100vh - var(--window-height));
     display: flex;
     justify-content: center;
     overflow: hidden;
 }
 .sub_sc .sticky .video_wrapper{
-    height: calc(100vh - var(--r-localnav-height));
+    height: calc(100vh - var(--window-height));
     align-items: flex-end;
     max-width: 100%;
     width: 100%;

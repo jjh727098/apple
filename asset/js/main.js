@@ -168,7 +168,6 @@ const photoTl = gsap.timeline({
   }
 })
 photoTl.to('.pnv_container  .video_box',{'--css-scrim-opacity':0});
-photoTl.to('.pnv_container  .video_label',{opacity:0});
 photoTl.to('.pnv_container  .video_wrapper',{width:'90%'});
 
 const ConnectTl = gsap.timeline({
@@ -207,7 +206,6 @@ const visionTl = gsap.timeline({
   }
 })
 visionTl.to('.os_container  .video_box',{'--css-scrim-opacity':0});
-visionTl.to('.os_container  .video_label',{opacity:0});
 visionTl.to('.os_container  .video_wrapper',{width:'90%'});
 
 
