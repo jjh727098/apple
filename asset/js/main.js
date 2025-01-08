@@ -73,37 +73,39 @@ videoControl(".group_design");
 function videoControl(frame) {
   const video = $(frame).find('video')[0]; // 비디오 DOM 요소 가져오기
 
+  if (!video) {
+    console.warn(`No video found in ${frame}`);
+    return; // 비디오가 없으면 종료
+  }
+
   video.addEventListener('loadedmetadata', function () {
     const time = video.duration;
+    console.log(time);
 
-  // 애니메이션 정의
-  const playProgress = gsap.to($(frame).find('.progress-circle'), {
-    'stroke-dashoffset': 0,
-    duration: time,
-    ease: "none",
-    repeat: -1, // 무한 반복
-    onRepeat: function () {
-      video.currentTime = 0; // 비디오 재생 위치 초기화
-      video.play(); // 비디오 계속 재생
-    }
-  });
+    const playProgress = gsap.to($(frame).find('.progress-circle'), {
+      'stroke-dashoffset': 0,
+      duration: time,
+      ease: "none",
+      repeat: -1,
+      onRepeat: function () {
+        video.currentTime = 0;
+        video.play();
+      }
+    });
 
-  // 재생/일시정지 버튼 클릭 이벤트
-  $(frame).find('.visual_play').click(function () {
-    if ($(this).hasClass('stop')) {
-      $(this).removeClass('stop');
-      playProgress.play(); // 애니메이션 재생
-      video.play(); // 비디오 재생
-    } else {
-      $(this).addClass('stop');
-      playProgress.pause(); // 애니메이션 일시정지
-      video.pause(); // 비디오 일시정지
-    }
-  });
-
+    $(frame).find('.visual_play').click(function () {
+      if ($(this).hasClass('stop')) {
+        $(this).removeClass('stop');
+        playProgress.play();
+        video.play();
+      } else {
+        $(this).addClass('stop');
+        playProgress.pause();
+        video.pause();
+      }
+    });
   });
 }
-
 
 
 const introTl1 = gsap.timeline({
@@ -303,7 +305,7 @@ avx.to('.sc_design .hg_box .hg_list .hg_item:nth-child(5)',5,{
 
 avx.to('.sc_design .hg_box .hg_list .hg_item:nth-child(6)',5,{
   opacity:1,
-},'a1+=186')
+},'a1+=180')
 avx.to('.sc_design .hg_box .hg_list .hg_item:nth-child(6)',10,{
   yPercent:100
 },'a1+=187')
@@ -427,7 +429,9 @@ sensorTl
 
 // 버튼 클릭 이벤트
 document.querySelector('.replay_btn').addEventListener('click', function () {
-  sensorTl.restart(); // 타임라인 처음부터 다시 실행
+  if (!sensorTl.isActive()) { // 타임라인이 실행 중이 아닐 때만 실행
+    sensorTl.restart(); // 타임라인 처음부터 다시 실행
+  }
 });
 
 
