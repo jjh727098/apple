@@ -1070,9 +1070,7 @@
 .sc_design .design_detail_thumb{
     grid-column: span 1;
 }
-.sc_design .design_detail_thumb{
-    grid-column: span 2;
-}
+
 
 .sc_design .design_thumb{
     top: 0;
@@ -1124,6 +1122,7 @@
 }
 .design_area .design_detail_thumb:last-child{
     position: relative;
+    grid-column: span 2;
 }
 .design_area .design_detail_thumb img{
     display: block;
