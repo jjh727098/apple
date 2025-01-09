@@ -334,14 +334,10 @@ technologyTl
 .to('.part_01_back',{ y:-500, duration: 20 })
 .to('.part_01_front',{ y:-400, duration: 20  },"<")
 .to('.part_03',{ y:-300,  duration: 20 },"<")
-.to('.start_frame',{ y:-100,  duration:20 },"<")
-.to('.sc_technology .scroll_area video',{opacity:1},"c+=.70")
-.to('.start_frame',{ opacity:0 },"b+=.62")
 
 .to('.part_01_back',{ y:-1000, duration: 4},"a")
 .to('.part_01_front',{ y:-800, duration: 4},"a")
 .to('.part_03',{ y:-700,duration: 4},"a")
-.to('.sc_technology .scroll_area video',{ y:100,duration: 4 },"a")
 .to({}, { 
   duration: 4, // currentTime 변경에 걸리는 시간
   onUpdate: function () {
@@ -349,7 +345,7 @@ technologyTl
     const progress = gsap.getProperty(this, 'progress'); // 애니메이션 진행률 (0~1)
     video.currentTime = 0 + (5 * progress); // 0초에서 5초까지 점진적으로 변경
   },
-  ease: "power1.inOut" // 자연스러운 가속/감속 효과
+  ease: "power1.inOut" 
 },"a");
 
 

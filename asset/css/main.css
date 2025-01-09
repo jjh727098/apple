@@ -1288,13 +1288,12 @@
     display: block;
     width: 960px;
     height: 608px;
-    opacity: 0;
     min-height: 0;
     object-fit: fill;
     grid-area: 1/1;
     max-width: 100%;
     will-change: transform;
-    margin-top: -39vh;
+    margin-top: -28vh;
 }
 .sc_technology .head_line_v2{
     display: flex;
