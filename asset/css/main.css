@@ -1735,6 +1735,12 @@
    #content{
         overflow: hidden;
    }
+   html{
+        overflow: hidden;
+   }
+   body{
+        overflow: hidden;
+   }
    .notice_area .notice_desc{
         font-size: 12px;    
    }
