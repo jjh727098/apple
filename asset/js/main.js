@@ -71,16 +71,15 @@ videoControl(".sc_vision");
 videoControl(".group_design");
 
 function videoControl(frame) {
-  const video = $(frame).find('video')[0]; // 비디오 DOM 요소 가져오기
+  const video = $(frame).find('video')[0]; 
 
   if (!video) {
     console.warn(`No video found in ${frame}`);
-    return; // 비디오가 없으면 종료
+    return; 
   }
 
   video.addEventListener('loadedmetadata', function () {
     const time = video.duration;
-    console.log(time);
 
     const playProgress = gsap.to($(frame).find('.progress-circle'), {
       'stroke-dashoffset': 0,
@@ -339,11 +338,11 @@ technologyTl
 .to('.part_01_front',{ y:-800, duration: 4},"a")
 .to('.part_03',{ y:-700,duration: 4},"a")
 .to({}, { 
-  duration: 4, // currentTime 변경에 걸리는 시간
+  duration: 4, 
   onUpdate: function () {
     const video = document.querySelector('.sc_technology .scroll_area video');
-    const progress = gsap.getProperty(this, 'progress'); // 애니메이션 진행률 (0~1)
-    video.currentTime = 0 + (5 * progress); // 0초에서 5초까지 점진적으로 변경
+    const progress = gsap.getProperty(this, 'progress');
+    video.currentTime = 0 + (5 * progress); 
   },
   ease: "power1.inOut" 
 },"a");
@@ -403,8 +402,8 @@ const sensorTl = gsap.timeline({
 
 sensorTl
   .to('.detail_off', { 
-    opacity: 1, // 켜짐
-    duration: 2 // 지속 시간
+    opacity: 1, 
+    duration: 2 
   })
   .to('.detail_video', { 
     opacity: 1, 
@@ -424,9 +423,9 @@ sensorTl
   })
 
 // 버튼 클릭 이벤트
-document.querySelector('.replay_btn').addEventListener('click', function () {
-  if (!sensorTl.isActive()) { // 타임라인이 실행 중이 아닐 때만 실행
-    sensorTl.restart(); // 타임라인 처음부터 다시 실행
+$('.replay_btn').on('click', function () {
+  if (!sensorTl.isActive()) {
+    sensorTl.restart();
   }
 });
 
