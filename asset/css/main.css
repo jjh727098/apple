@@ -1099,6 +1099,7 @@
     padding-top: 20px;
     z-index: 4;
     background-color: #fff;
+    overflow: hidden;
 }
 .group_design .design_area{
     display: grid;
