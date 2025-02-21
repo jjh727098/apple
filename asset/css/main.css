@@ -1482,6 +1482,7 @@
 
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 .dual_chip_area .dual_chip_thumb{
     display: block;
